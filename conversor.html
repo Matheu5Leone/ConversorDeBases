@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🧮 CONVERSOR</title>
+    <link rel="stylesheet" href="conversor.css">
+</head>
+
+<body>
+    <div class="header">
+        <div class="textoheader">
+            <h1>🧮 Conversor de Bases</h1><br>
+        </div>
+    </div>
+
+    <div class="section1"><br>
+        <div class="subsection1">
+            <h2>Insira um número em Decimal:</h2> <br>
+            <div class="input1"><input class="inputstyle"  id="inputbinario"></div> <br>
+            <div class="buttonconverter"><button class="buttonstyle" onclick="funcconverter()">CONVERTER</button></div>
+            <br><br>
+            <h3>Seu número convertido em: </h3><br>
+            <h3>Binário</h3>
+            <div id="resultado1" class="resultados"></div><br>
+            <h3>Octal</h3>
+            <div id="resultado2" class="resultados"></div><br>
+            <h3>Hexadecimal</h3>
+            <div id="resultado3" class="resultados"></div><br></h3>
+        </div><br>
+    </div>
+
+
+</body>
+
+</html>
+
+<script>
+    function funcconverter() {
+        var dados = Number(inputbinario.value);
+
+        var binario = dados.toString(2);
+        var octal = dados.toString(8);
+        var hexadecimal = dados.toString(16);
+
+
+        resultado1.innerHTML = `${binario}`
+        resultado2.innerHTML = `${octal}`
+        resultado3.innerHTML = `${hexadecimal}`
+
+
+
+    }
+</script>
